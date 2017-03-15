@@ -1,0 +1,42 @@
+
+<div class="container-fluid">
+  <h1 id="logo" class="text-center">coachly.</h1>
+  <h2 class="text-center">coaching made better</h2>
+
+
+  <div class="row text-center" id="icon-wrapper">
+
+    <div class="col-xs-12">
+      <%= icon('user', class: 'people_icons', id: 'icon1') %>
+      <%= icon('user', class: 'people_icons people_icons_light', id: 'icon2') %>
+      <%= icon('user', class: 'people_icons people_icons_light', id: 'icon3') %>
+      <%= icon('user', class: 'people_icons people_icons_light', id: 'icon4') %>
+    </div>
+  </div>
+
+  <div class="row text-center" id="login-button">
+    <div class="col-xs-12">
+      <button class="btn btn-login" data-toggle-"modal" data-target="#login-modal">start improving</button>
+    </div>
+  </div>
+
+
+<!--  Modal -->
+  <div class="login-modal">
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+        <%#= form_for(:session, url: login_path) do |f| %>
+          <%#= f.label :email %>
+          <%#= f.email_field :email, class: 'form-control' %>
+
+          <%#= f.label :password %>
+          <%#= f.password_field :password, class: 'form-control' %>
+
+          <%#= f.submit "Log In", class: "btn btn-primary" %>
+        <%# end %>
+
+        <!-- <p>New user? <%#= link_to "Sign up now!", signup_path %></p> -->
+      </div>
+    </div>
+  </div>
+</div>

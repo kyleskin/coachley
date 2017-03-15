@@ -1,0 +1,68 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$main: #1995AD;
+$light: #A1D6E2;
+$gray: #BCBABE;
+$white: #F1F1F2;
+
+$headline_font: "Comfortaa";
+$app_font: "Istok Web";
+
+.btn {
+  border-radius: 5%;
+}
+
+body {
+  background-color: $main;
+  font-family: $app_font;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#logo {
+  width: inherit;
+  margin-top: 10vh;
+  font-family: $headline_font;
+  font-weight: bold;
+  font-size: 10rem;
+  color: white;
+  letter-spacing: 0.1rem;
+}
+
+
+#icon-wrapper {
+  margin-top: 8vh;
+
+}
+.people_icons {
+  font-size: 14rem !important;
+}
+
+.people_icons_light {
+  color: $white;
+  margin-left: 2rem;
+}
+
+
+#login-button {
+  margin-top: 5rem;
+}
+.btn-login {
+  border-radius: 3rem;
+  padding: 1rem 7rem;
+  font-size: 2rem;
+  color: $white;
+  background-color: #7eb530;
+  &:hover {
+    background-color: #94c500;
+    color: $white;
+  }
+}
+
+#login-modal {
+  background: $light;
+  max-width: 60rem;
+  position: absolute;
+}
