@@ -68,7 +68,7 @@ class RepTest < ActiveSupport::TestCase
   end
 
   test "password should be at least 6 characters" do
-    @rep.password = @rep.password_confirmation = ' ' * 5
+    @rep.password = @rep.password_confirmation = 'a' * 5
     assert_not @rep.valid?
   end
 end
