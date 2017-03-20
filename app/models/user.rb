@@ -1,6 +1,5 @@
 class User < ApplicationRecord
 
-  enum role: [:rep, :coach]
   before_save { email.downcase! }
 
   validates :name,  presence: true,
@@ -15,10 +14,5 @@ class User < ApplicationRecord
   has_secure_password
   validates :password,  presence: true,
                         length: { minimum: 6 }
-
-  before_create do
-    self.role ||= 0
-  end
-
 
 end
