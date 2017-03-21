@@ -17,9 +17,6 @@
       <%= f.label :password_confirmation, "Cofirmation" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
 
-      <%= f.label :role %>
-      <%= f.select(:role, options_for_select([['Team Member', 0], ['Coach', 1]])) %>
-
       <%= f.submit "Create my account", class: "btn btn-primary" %>
 
     <% end %>

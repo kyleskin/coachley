@@ -3,7 +3,8 @@ require 'test_helper'
 class GoalTest < ActiveSupport::TestCase
 
   def setup
-    @goal = Goal.new(objective: 'Decrease average hold time', due_date: '05/05/2017')
+    @rep = users(:rep)
+    @goal = @rep.goals.build(objective: "text text text", due_date: "5/1/17")
   end
 
   test "should be valid" do
@@ -27,5 +28,10 @@ class GoalTest < ActiveSupport::TestCase
 
   test "current should default to true" do
     assert_equal @goal.current, true
+  end
+
+  test "user id should be present" do
+    @goal.user_id = nil
+    assert_not @goal.valid?
   end
 end

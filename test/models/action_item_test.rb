@@ -2,7 +2,8 @@ require 'test_helper'
 
 class ActionItemTest < ActiveSupport::TestCase
   def setup
-    @action_item = ActionItem.new(objective: 'Increase awesome', due_date: '5/5/17')
+    @rep = users(:rep)
+    @action_item = @rep.action_items.build(objective: 'Increase awesome', due_date: '5/5/17')
   end
 
   test "should be valid" do
@@ -26,5 +27,10 @@ class ActionItemTest < ActiveSupport::TestCase
 
   test "current should default to true" do
     assert_equal @action_item.current, true
+  end
+
+  test "user id should be present" do
+    @action_item.user_id = nil
+    assert_not @action_item.valid?
   end
 end
