@@ -70,4 +70,20 @@ class RepTest < ActiveSupport::TestCase
     @rep.password = @rep.password_confirmation = 'a' * 5
     assert_not @rep.valid?
   end
+
+  test "goal should be deleted when user is deleted" do
+    @rep.save
+    @rep.goals.create!(objective: "text text text", due_date: "4/1/2017")
+    assert_difference 'Goal.count', -1 do
+      @rep.destroy
+    end
+  end
+
+  test "action item should be deleted when user is deleted" do
+    @rep.save
+    @rep.action_items.create!(objective: "text text text", due_date: "4/1/2017")
+    assert_difference 'ActionItem.count', -1 do
+      @rep.destroy
+    end
+  end
 end

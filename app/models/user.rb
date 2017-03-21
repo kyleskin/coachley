@@ -1,7 +1,7 @@
 class User < ApplicationRecord
-  has_many :targets
-  has_many :goals
-  has_many :action_items
+  has_many :targets, dependent: :destroy
+  has_many :goals, dependent: :destroy
+  has_many :action_items, dependent: :destroy
 
   before_save { email.downcase! }
 

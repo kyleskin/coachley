@@ -70,4 +70,20 @@ class CoachTest < ActiveSupport::TestCase
     assert_not @coach.valid?
   end
 
+  test "goal should be deleted when user is deleted" do
+    @coach.save
+    @coach.goals.create!(objective: "text text text", due_date: "4/1/2017")
+    assert_difference 'Goal.count', -1 do
+      @coach.destroy
+    end
+  end
+
+  test "action item should be deleted when user is deleted" do
+    @coach.save
+    @coach.action_items.create!(objective: "text text text", due_date: "4/1/2017")
+    assert_difference 'ActionItem.count', -1 do
+      @coach.destroy
+    end
+  end
+
 end
