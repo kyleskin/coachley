@@ -1,0 +1,2 @@
+class ActionItem < Target
+end

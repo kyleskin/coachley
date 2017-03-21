@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170320224131) do
+ActiveRecord::Schema.define(version: 20170321001722) do
+
+  create_table "targets", force: :cascade do |t|
+    t.string   "due_date"
+    t.boolean  "current",         default: true
+    t.string   "type"
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.text     "objective"
+    t.text     "expected_result"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
