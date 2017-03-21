@@ -8,3 +8,8 @@ coach:
   name: Coach Test
   email: CoachTest@example.com
   password_digest: <%= User.digest("password") %>
+
+admin:
+  name: Admin Test
+  email: AdminTest@example.com
+  password_digest: <%= User.digest("admin1") %>
