@@ -34,4 +34,5 @@ class GoalTest < ActiveSupport::TestCase
     @goal.user_id = nil
     assert_not @goal.valid?
   end
+
 end
