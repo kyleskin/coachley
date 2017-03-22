@@ -13,3 +13,8 @@ admin:
   name: Admin Test
   email: AdminTest@example.com
   password_digest: <%= User.digest("admin1") %>
+
+manager:
+  name: Manager Test
+  email: ManagerTest@example.com
+  password_digest: <%= User.digest("manager") %>

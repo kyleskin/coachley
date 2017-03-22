@@ -2,7 +2,8 @@ require 'test_helper'
 
 class CoachTest < ActiveSupport::TestCase
   def setup
-    @coach = Coach.new(name: 'Coach 1', email: 'coach1@example.com', password: 'foobar', password_confirmation: 'foobar')
+    @manager = Manager.create(name: "Manager", email: "manager@email.com", password: "foobar", password_confirmation: "foobar")
+    @coach = Coach.create(name: "Coach", email: "coach@email.com", password: "foobar", password_confirmation: "foobar", manager_id: @manager.id)
   end
 
   test 'should be valid' do

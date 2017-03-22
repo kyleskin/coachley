@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170321023140) do
+ActiveRecord::Schema.define(version: 20170321213501) do
 
   create_table "targets", force: :cascade do |t|
     t.string   "due_date"
@@ -30,6 +30,9 @@ ActiveRecord::Schema.define(version: 20170321023140) do
     t.datetime "updated_at",      null: false
     t.string   "password_digest"
     t.string   "type"
+    t.integer  "coach_id"
+    t.integer  "rep_id"
+    t.integer  "manager_id"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

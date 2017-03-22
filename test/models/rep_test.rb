@@ -3,7 +3,9 @@ require 'test_helper'
 class RepTest < ActiveSupport::TestCase
 
   def setup
-    @rep = Rep.new(name: 'Rep 1', email: 'rep1@example.com', password: 'foobar', password_confirmation: 'foobar')
+    @manager = Manager.create(name: "Manager", email: "manager@email.com", password: "foobar", password_confirmation: "foobar")
+    @coach = Coach.create(name: "Coach", email: "coach@email.com", password: "foobar", password_confirmation: "foobar", manager_id: @manager.id)
+    @rep = Rep.create(name: 'Rep 1', email: 'rep1@example.com', password: 'foobar', password_confirmation: 'foobar', coach_id: @coach.id, manager_id: @manager.id)
   end
 
   test 'should be valid' do
