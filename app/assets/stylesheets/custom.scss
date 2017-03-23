@@ -69,36 +69,30 @@ $app_font: "Istok Web";
   }
 }
 
-#login-modal {
-  background: $light;
-  max-width: 60rem;
-  position: absolute;
-}
-
 /* Forms */
 
-input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
-  width: 100%;
-  margin-bottom: 15px;
-  @include box-sizing;
-}
-
-input {
-  height: auto !important;
-}
-
-#error_explanation {
-  color: red;
-  ul {
-    color: red;
-    margin: 0 0 30px 0;
-  }
-}
-
-.field_with_errors {
-  @extend .has-error;
-  .form-control {
-    color: red;
-  }
-}
+// input, textarea, select, .uneditable-input {
+//   border: 1px solid #bbb;
+//   width: 100%;
+//   margin-bottom: 15px;
+//   @include box-sizing;
+// }
+//
+// input {
+//   height: auto !important;
+// }
+//
+// #error_explanation {
+//   color: red;
+//   ul {
+//     color: red;
+//     margin: 0 0 30px 0;
+//   }
+// }
+//
+// .field_with_errors {
+//   @extend .has-error;
+//   .form-control {
+//     color: red;
+//   }
+// }
