@@ -2,19 +2,14 @@
 rep:
   name: Rep Test
   email: RepTest@example.com
-  password_digest: <%= User.digest("foobar") %>
+  password_digest: <%= User.digest("password") %>
 
 coach:
   name: Coach Test
   email: CoachTest@example.com
   password_digest: <%= User.digest("password") %>
 
-admin:
-  name: Admin Test
-  email: AdminTest@example.com
-  password_digest: <%= User.digest("admin1") %>
-
 manager:
   name: Manager Test
   email: ManagerTest@example.com
-  password_digest: <%= User.digest("manager") %>
+  password_digest: <%= User.digest("password") %>
