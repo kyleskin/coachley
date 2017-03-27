@@ -8,10 +8,12 @@
   </thead>
 
   <tbody>
-    <%= content_tag(:tr, @users) do |user| %>
-    <td><%= user.name %></td>
-    <td><%= user.email %></td>
-    <td><%= user.type %></td>
+    <% @users.each do |user| %>
+    <tr>
+      <td><%= user.name %></td>
+      <td><%= user.email %></td>
+      <td><%= user.type %></td>
+    </tr>
     <% end %>
   </tbody>
 </table>
